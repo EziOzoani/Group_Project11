@@ -1,5 +1,10 @@
 # README
 
+To set up the project, you first need the following:
+* MySQL - `sudo apt-get install mysql` - Including password setup, etc.
+* Ruby - `sudo apt-get install ruby`
+* Ruby on Rails - `gem install rails` - Rails is a Ruby extension, so this is after installing Ruby.
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
