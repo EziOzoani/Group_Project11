@@ -28,6 +28,18 @@ Then, open up a command line and enter it using `$ mysql -u root -p`
 Import the database (the current one being in `fardemo_new.sql`) by doing:  
 `$ mysql -u username -p database_name < fardemo_new.sql`
 
+#### Viewing The Database
+
+While the database can be read using the command-line MySQL, it's not the easiest thing. As such, it can be read using LibreOffice Base (Should come with Ubuntu/Mint when you install it). For this, you will first need to load it into MySQL as per above.
+
+First, you need to download a connector library - just look up "MySQL JDBC", take the first result, download one of the archives and unpack them somewhere.
+
+Then, open up the default LibreOffice menu, and go to `Tools` -> `Options` -> `Advanced` -> `Class Path`. Press `Add Archive`, go to where you unpacked the connector and choose one of the .jar files (I chose the one with ending with `-bin.jar`), save and reset LibreOffice.
+
+Then proceed to open up LibreOffice Base, at which point you should be greeted with a screen to set up/select a database. First, go to `Connect to an existing database`, and select MySQL. Then, choose `Connect using JDBC`. Then, for Database name, insert the name you gave it when importing, Server should be `localhost`, Port number `3306`, and the driver class `com.mysql.jdbc.Driver`. Next, enter the username you are using it with (most likely `root`), and if you set a password or not. At thish point, you should be able to press "Finish", and then are given a data file to save on your computer (I don't know exactly what it does either), at which you will be able to look at the database in LibreOffice.
+
+On coming back, you will be able to use `Open an existing database file` in the select screen, where you choose the file you saved earlier. On reaching the main view, go to Tables, where you should be able to view all the tables in the database (you may be asked for your password). NOTE - be careful to not unintentionally edit over stuff in the database - when closing, choose No to save things unless you're certain you want to make the changes that you did, as you may unintentionally mess with data, or worse, the table structure.
+
 #### Project
 
 First, clone the repository: `git clone https://github.com/EziOzoani/Group_Project11.git`  
